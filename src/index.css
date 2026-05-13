@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-bgDark: #0b0e14;
+  --color-bgPanel: rgba(26, 32, 44, 0.7);
+  --color-bgPanelSolid: #1a202c;
+  --color-neonCyan: #00f0ff;
+  --color-neonRed: #ff003c;
+  --color-neonAmber: #fcee0a;
+  --font-orbitron: 'Orbitron', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --shadow-glow-cyan: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+  --shadow-glow-red: 0 0 10px rgba(255, 0, 60, 0.5), 0 0 20px rgba(255, 0, 60, 0.3);
+  --shadow-glow-amber: 0 0 10px rgba(252, 238, 10, 0.5), 0 0 20px rgba(252, 238, 10, 0.3);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@layer base {
+  body {
+    @apply bg-bgDark text-slate-200 font-inter overflow-hidden;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(0, 240, 255, 0.05), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(255, 0, 60, 0.05), transparent 25%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-orbitron uppercase tracking-wider;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-bgPanel backdrop-blur-md border border-white/10 rounded-lg p-5 shadow-glass flex flex-col;
+  }
+  
+  .neon-text-cyan {
+    @apply text-neonCyan drop-shadow-[0_0_10px_rgba(0,240,255,0.5)];
+  }
+
+  .neon-border-cyan {
+    @apply border-neonCyan shadow-glow-cyan;
+  }
+
+  .btn-action {
+    @apply bg-transparent border border-neonCyan text-neonCyan px-4 py-2 rounded font-orbitron text-xs cursor-pointer uppercase transition-all duration-200 hover:bg-neonCyan/10 hover:shadow-glow-cyan;
+  }
+  
+  .btn-critical {
+    @apply border-neonRed text-neonRed hover:bg-neonRed/10 hover:shadow-glow-red;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3); 
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6); 
+}
