@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+# 🛰️ OrbitalGuard AI 3.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![OrbitalGuard Banner](public/assets/banner.png)
 
-Currently, two official plugins are available:
+> **Cinematic Orbital Intelligence & Space Situational Awareness Engine**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+OrbitalGuard AI is a high-fidelity, real-time orbital simulation platform designed to monitor, track, and forecast satellite trajectories and space debris clusters. Built with a futuristic, glassmorphic interface and a custom physics propagation engine, it provides a cinematic experience for space situational awareness.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Key Features
 
-## Expanding the ESLint configuration
+### 🌍 Real-Time 3D Visualization
+- **High-Fidelity Earth Globe**: Interactive 3D Earth with day/night cycles and atmospheric effects.
+- **Orbital Kinematics**: Live propagation of satellite orbits using a custom physics engine.
+- **Dynamic HUD**: Holographic data overlays providing real-time telemetry and system status.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🛡️ Threat Assessment & Collision Prediction
+- **Debris Tracking**: Monitor over 12,000+ tracked debris objects with live telemetry.
+- **Collision Forecasting**: AI-driven prediction of potential orbital intersections with time-to-closest-approach (TCA) alerts.
+- **Automated Maneuver Planning**: Suggested orbital shifts to avoid predicted collisions.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🎮 Physics Sandbox
+- **Custom Perturbations**: Adjust atmospheric drag, solar radiation pressure, and Earth's J2 gravity anomaly.
+- **Multi-Body Physics**: Enable Lunar/Solar gravity well perturbations for high-accuracy deep space tracking.
+- **Timeline Control**: Scrub through historical and future orbital states.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 🤖 AI Copilot
+- **Intelligent Assistant**: Real-time analysis of orbital data and threat prioritization.
+- **Voice-Enabled HUD**: (Mocked) Interactive intelligence interface for mission-critical operations.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📸 Dashboard Preview
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+![OrbitalGuard Dashboard](public/assets/dashboard.png)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **3D Engine**: [@react-three/fiber](https://r3f.docs.pmnd.rs/) + [Three.js](https://threejs.org/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Data Visualization**: [Recharts](https://recharts.org/)
+- **State Management**: [Zustand](https://zustand-demo.pmnd.rs/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+---
+
+## 📦 Installation & Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/VayuTripathi09/OrbitalGaurd-Ai.git
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">
+  Developed with ❤️ for the future of space exploration.
+</p>
